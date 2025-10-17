@@ -78,7 +78,7 @@ public class Factorial {
 
 		do
 		{
-			result = result * currentMultiplier;
+			result *= currentMultiplier;
 			currentMultiplier += 1;
 		}
 		while (currentMultiplier <= num);

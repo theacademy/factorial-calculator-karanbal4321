@@ -81,7 +81,7 @@ public class Factorial {
 			result = result * currentMulitplier;
 			currentMulitplier += 1;
 		}
-		while (currentMulitplier <= num)
+		while (currentMulitplier <= num);
 
 		//YOUR CODE ENDS HERE
 		this.printStream.print("The Factorial is: " + result);		

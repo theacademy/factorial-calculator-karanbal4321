@@ -3,8 +3,6 @@ package com.wiley.assignment1;
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
-
-
 public class Factorial {
 	
 	 private Scanner scanner;
@@ -34,9 +32,33 @@ public class Factorial {
 		*/
 
 		//YOUR CODE STARTS HERE
+		 boolean numberIsValid = true; // initial assumption
 
-		return -1;
+		 try
+		 {
+			 String stringNumber = scanner.nextLine();
+			 this.num = Integer.parseInt(stringNumber);
 
+			 if (this.num < 1 || this.num > 10)
+			 {
+				 numberIsValid = false; // outside range
+			 }
+
+		 }
+		 catch (NumberFormatException exception)
+		 {
+			 numberIsValid = false; // not an int number
+		 }
+
+		 if (numberIsValid)
+		 {
+			 return this.num;
+		 }
+		 else
+		 {
+			 this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
+			 return -1;
+		 }
 		//YOUR CODE ENDS HERE
 		 
 			
@@ -53,8 +75,14 @@ public class Factorial {
 		 
 		int result = 1;
 		//YOUR CODE STARTS HERE
+		int currentMultiplier = 1;
 
- 
+		do
+		{
+			result *= currentMultiplier;
+			currentMultiplier += 1;
+		}
+		while (currentMultiplier <= num);
 
 		//YOUR CODE ENDS HERE
 		this.printStream.print("The Factorial is: " + result);		

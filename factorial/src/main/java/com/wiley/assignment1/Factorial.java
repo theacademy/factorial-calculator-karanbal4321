@@ -56,7 +56,7 @@ public class Factorial {
 		 }
 		 else
 		 {
-			 System.out.println("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
+			 this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
 			 return -1;
 		 }
 		//YOUR CODE ENDS HERE
